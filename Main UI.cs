@@ -25,7 +25,9 @@ namespace _20231111
             //this.TopMost = true; // 다른 창 위에 폼이 나타나도록 설정
             this.FormBorderStyle = FormBorderStyle.None; //폼의 경계를 없앱니다
             this.WindowState = FormWindowState.Maximized;
-            
+           
+
+
 
             if (!isLoggedIn)
             {
@@ -40,17 +42,36 @@ namespace _20231111
 
         private void DisableMainFormFeatures()
         {
-            // 메인 폼 내의 기능을 비활성화
+            // 메인 폼 내의 버튼을 비활성화
             btnOpenIMG.Enabled = false;
             btnConvert.Enabled = false;
+            btnSave.Enabled = false;
+            // 비활성화 상태 시 흰색 배경
+            btnOpenIMG.BackColor = Color.White;
+            btnConvert.BackColor = Color.White;
+            btnSave.BackColor = Color.White;
+            //버튼 상태 메시지
+            lblBtnCheck.BackColor = Color.White;
+            lblBtnCheck.ForeColor = Color.Red;
+            
             lblLogInMsg.ForeColor = Color.Red;
         }
 
         public void EnableMainFormFeatures()
         {
-            // 메인 폼 내의 기능을 활성화
+            // 메인 폼 내의 버튼을 활성화
             btnOpenIMG.Enabled = true;
             btnConvert.Enabled = true;
+            btnSave.Enabled = true;
+            // 비활성화 상태 시 회색 배경
+            btnOpenIMG.BackColor = Color.DimGray;
+            btnConvert.BackColor = Color.DimGray;
+            btnSave.BackColor = Color.DimGray;
+            //버튼 상태 메시지
+            lblBtnCheck.ForeColor = Color.DarkGreen;
+            lblBtnCheck.BackColor = Color.DimGray;
+            lblBtnCheck.Text = "버튼 활성화";
+
             LogIn();
         }
 
@@ -59,8 +80,8 @@ namespace _20231111
             isLoggedIn = true;
             lblLogIn.Text = "Log Out";
             lblLogInMsg.Text = "로그인되었습니다.";
-            lblLogInMsg.ForeColor = Color.Green;
-
+            lblLogInMsg.ForeColor = Color.DarkGreen;
+             
         }
 
         public void LogOut()
@@ -68,8 +89,10 @@ namespace _20231111
             isLoggedIn = false;
             DisableMainFormFeatures();
             lblLogIn.Text = "Log In";
+            //로그아웃 버튼을 눌렀을 때 버튼 원복
             lblLogInMsg.Text = "로그인이 필요합니다!";
-            lblLogInMsg.ForeColor = Color.Red;
+            lblBtnCheck.Text = "버튼 비활성화";
+            //lblLogInMsg.ForeColor = Color.Red;
         }
 
 
@@ -78,7 +101,10 @@ namespace _20231111
             
             if (isLoggedIn)
             {
-                // 로그인 상태에서 로그인 버튼을 클릭하면 로그아웃 처리를 수행합니다.
+                //로그아웃 시 등록했던 사진 초기화
+                pictureBox1.Image = null;
+                pictureBox2.Image = null;
+                // 로그인 상태에서 로그인 버튼을 클릭하면 로그아웃 처리를 수행합니다.               
                 LogOut();
             }
             else
@@ -165,7 +191,7 @@ namespace _20231111
             }
             else
             {
-                MessageBox.Show("이미지를 먼저 불러와주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("변환할 이미지가 없습니다!!!", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

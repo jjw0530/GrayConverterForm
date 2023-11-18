@@ -37,14 +37,15 @@ namespace _20231111
             this.pBoxLogIn = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogInMsg = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblGrayScaleConverter = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblInput = new System.Windows.Forms.Label();
+            this.lblOutput = new System.Windows.Forms.Label();
             this.btnOpenIMG = new System.Windows.Forms.Button();
             this.btnConvert = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblBtnCheck = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxExit)).BeginInit();
@@ -179,24 +180,26 @@ namespace _20231111
             // 
             // lblLogInMsg
             // 
-            this.lblLogInMsg.AutoSize = true;
-            this.lblLogInMsg.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblLogInMsg.Location = new System.Drawing.Point(1677, 176);
+            this.lblLogInMsg.BackColor = System.Drawing.Color.DimGray;
+            this.lblLogInMsg.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblLogInMsg.ForeColor = System.Drawing.Color.Black;
+            this.lblLogInMsg.Location = new System.Drawing.Point(1600, 229);
             this.lblLogInMsg.Name = "lblLogInMsg";
-            this.lblLogInMsg.Size = new System.Drawing.Size(165, 21);
+            this.lblLogInMsg.Size = new System.Drawing.Size(323, 50);
             this.lblLogInMsg.TabIndex = 24;
             this.lblLogInMsg.Text = "로그인이 필요합니다!";
+            this.lblLogInMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // lblGrayScaleConverter
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Gray;
-            this.label2.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(367, 50);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "GrayScaleConverter";
+            this.lblGrayScaleConverter.BackColor = System.Drawing.Color.DimGray;
+            this.lblGrayScaleConverter.Font = new System.Drawing.Font("맑은 고딕", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblGrayScaleConverter.ForeColor = System.Drawing.Color.Black;
+            this.lblGrayScaleConverter.Location = new System.Drawing.Point(0, 0);
+            this.lblGrayScaleConverter.Name = "lblGrayScaleConverter";
+            this.lblGrayScaleConverter.Size = new System.Drawing.Size(1923, 206);
+            this.lblGrayScaleConverter.TabIndex = 26;
+            this.lblGrayScaleConverter.Text = "GrayScaleConverter";
             // 
             // pictureBox1
             // 
@@ -206,46 +209,50 @@ namespace _20231111
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
             // 
-            // label4
+            // lblInput
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(362, 965);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 32);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Input";
+            this.lblInput.BackColor = System.Drawing.Color.DimGray;
+            this.lblInput.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblInput.Location = new System.Drawing.Point(325, 977);
+            this.lblInput.Name = "lblInput";
+            this.lblInput.Size = new System.Drawing.Size(147, 75);
+            this.lblInput.TabIndex = 29;
+            this.lblInput.Text = "Input";
+            this.lblInput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lblOutput
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(1006, 965);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 32);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Output";
+            this.lblOutput.BackColor = System.Drawing.Color.DimGray;
+            this.lblOutput.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblOutput.Location = new System.Drawing.Point(988, 977);
+            this.lblOutput.Name = "lblOutput";
+            this.lblOutput.Size = new System.Drawing.Size(147, 75);
+            this.lblOutput.TabIndex = 30;
+            this.lblOutput.Text = "Output";
+            this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOpenIMG
             // 
+            this.btnOpenIMG.BackColor = System.Drawing.Color.DimGray;
             this.btnOpenIMG.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnOpenIMG.Location = new System.Drawing.Point(1499, 892);
             this.btnOpenIMG.Name = "btnOpenIMG";
             this.btnOpenIMG.Size = new System.Drawing.Size(112, 105);
             this.btnOpenIMG.TabIndex = 31;
             this.btnOpenIMG.Text = "Open IMG";
-            this.btnOpenIMG.UseVisualStyleBackColor = true;
+            this.btnOpenIMG.UseVisualStyleBackColor = false;
             this.btnOpenIMG.Click += new System.EventHandler(this.btnOpenIMG_Click);
             // 
             // btnConvert
             // 
+            this.btnConvert.BackColor = System.Drawing.Color.DimGray;
             this.btnConvert.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnConvert.Location = new System.Drawing.Point(1640, 892);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(112, 105);
             this.btnConvert.TabIndex = 33;
             this.btnConvert.Text = "Convert";
-            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.UseVisualStyleBackColor = false;
             this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // pictureBox2
@@ -258,34 +265,49 @@ namespace _20231111
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.DimGray;
             this.btnSave.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnSave.Location = new System.Drawing.Point(1783, 891);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 105);
             this.btnSave.TabIndex = 35;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblBtnCheck
+            // 
+            this.lblBtnCheck.BackColor = System.Drawing.Color.DimGray;
+            this.lblBtnCheck.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblBtnCheck.ForeColor = System.Drawing.Color.Black;
+            this.lblBtnCheck.Location = new System.Drawing.Point(1533, 799);
+            this.lblBtnCheck.Name = "lblBtnCheck";
+            this.lblBtnCheck.Size = new System.Drawing.Size(323, 50);
+            this.lblBtnCheck.TabIndex = 36;
+            this.lblBtnCheck.Text = "버튼 비활성화";
+            this.lblBtnCheck.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(1924, 1061);
             this.ControlBox = false;
+            this.Controls.Add(this.lblBtnCheck);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.btnOpenIMG);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblOutput);
+            this.Controls.Add(this.lblInput);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblLogInMsg);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.lblGrayScaleConverter);
             this.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "Project 1";
@@ -297,7 +319,6 @@ namespace _20231111
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -310,14 +331,15 @@ namespace _20231111
         private System.Windows.Forms.Label lblLogInMsg;
         private System.Windows.Forms.PictureBox pboxMinimize;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblGrayScaleConverter;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblInput;
+        private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.Button btnOpenIMG;
         private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblBtnCheck;
     }
 }
 
